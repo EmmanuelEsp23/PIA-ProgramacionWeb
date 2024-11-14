@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deyaa\\OneDrive\\Imágenes\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj": {}
+    "C:\\Users\\emman\\Desktop\\PIA\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deyaa\\OneDrive\\Imágenes\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj": {
+    "C:\\Users\\emman\\Desktop\\PIA\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deyaa\\OneDrive\\Imágenes\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj",
+        "projectUniqueName": "C:\\Users\\emman\\Desktop\\PIA\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj",
         "projectName": "PIA-PWEB",
-        "projectPath": "C:\\Users\\deyaa\\OneDrive\\Imágenes\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj",
-        "packagesPath": "C:\\Users\\deyaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deyaa\\OneDrive\\Imágenes\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\obj\\",
+        "projectPath": "C:\\Users\\emman\\Desktop\\PIA\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj",
+        "packagesPath": "C:\\Users\\emman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emman\\Desktop\\PIA\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\deyaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
