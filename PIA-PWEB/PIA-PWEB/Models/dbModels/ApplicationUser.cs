@@ -9,7 +9,7 @@ namespace PIA_PWEB.Models.dbModels
     {
 
         [StringLength(500)]
-        public string FotoPerfil { get; set; } = null!;
+        public string? FotoPerfil { get; set; }
 
         [StringLength(100)]
         public string Apellidos { get; set; } = null!;
