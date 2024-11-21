@@ -14,6 +14,10 @@ namespace PIA_PWEB.Controllers
         {
             return View("MiPerfil"); 
         }
+        public IActionResult GestionPeli()
+        {
+            return View("GestionPeli");
+        }
     }
-   
+      
 }

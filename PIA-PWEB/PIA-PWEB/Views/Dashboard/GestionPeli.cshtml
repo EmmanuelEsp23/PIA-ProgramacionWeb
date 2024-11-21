@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Gestión de Peliculas";
+}
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+<div class="container my-4">
+    <h1 class="text-center mb-4">Gestión de Películas</h1>
+    <br>
+    <button class="btn btn-success ms-3" data-bs-toggle="modal" data-bs-target="#agregarModal">
+        <i class="fa-sharp fa-solid fa-plus">Agregar</i>
+    </button>
+    <br>
+    <br>
+    
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Año</th>
+                <th>Director</th>
+                <th>Categoría</th>
+                <th>Stream</th>
+                <th>Portada</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tablaPeliculas">
+            <!-- Las películas se van a agregar  aquí -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal para Agregar/Editar Película -->
+<div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="agregarModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="agregarModalLabel">Agregar Película</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulario para agregar o editar -->
+                <form id="formPelicula">
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="titulo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="anio" class="form-label">Año</label>
+                        <input type="number" class="form-control" id="anio" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="director" class="form-label">Director</label>
+                        <input type="text" class="form-control" id="director" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoria" class="form-label">Categoría</label>
+                        <input type="text" class="form-control" id="categoria" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="stream" class="form-label">Stream</label>
+                        <input type="text" class="form-control" id="stream" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="portada" class="form-label">Portada (URL)</label>
+                        <input type="text" class="form-control" id="portada" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/js/GestionPeli.js"></script>
