@@ -18,6 +18,11 @@ namespace PIA_PWEB.Controllers
         {
             return View("GestionPeli");
         }
+
+        public IActionResult GestionAdmin()
+        {
+            return View("GestionAdmin");
+        }
     }
       
 }
