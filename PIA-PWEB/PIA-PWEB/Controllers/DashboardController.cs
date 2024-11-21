@@ -1,15 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PIA_PWEB.Models;
 using System.Diagnostics;
+using PIA_PWEB.Data;
 
 
 namespace PIA_PWEB.Controllers
 {
     public class DashboardController : Controller
     {
-        public IActionResult Dashboard()
+        
+
+        public IActionResult MiPerfil()
         {
-            return View("dashboard");
+            return View("MiPerfil"); 
         }
     }
+   
 }
