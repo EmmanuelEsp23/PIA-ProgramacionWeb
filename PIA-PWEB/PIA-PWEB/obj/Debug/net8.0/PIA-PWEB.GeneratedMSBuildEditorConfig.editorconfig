@@ -190,16 +190,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/emmad/OneDrive/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Dashboard/GestionAdmin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEdlc3Rpb25BZG1pbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/emmad/OneDrive/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Dashboard/GestionPeli.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEdlc3Rpb25QZWxpLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emmad/OneDrive/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Dashboard/MiPerfil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXE1pUGVyZmlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emmad/OneDrive/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/GestionAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvbkFkbWluXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emmad/OneDrive/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Home/Index.cshtml]
