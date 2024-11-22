@@ -2,13 +2,11 @@
 
 namespace PIA_PWEB.Controllers
 {
-    public class GestionAdmin : Controller
+    public class ListasController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
-
-
     }
 }

@@ -8,11 +8,11 @@ namespace PIA_PWEB.Controllers
 {
     public class DashboardController : Controller
     {
-        
+
 
         public IActionResult MiPerfil()
         {
-            return View("MiPerfil"); 
+            return View("MiPerfil");
         }
         public IActionResult GestionPeli()
         {
@@ -22,6 +22,31 @@ namespace PIA_PWEB.Controllers
         public IActionResult GestionAdmin()
         {
             return View("GestionAdmin");
+        }
+
+        public IActionResult GestionCategorias()
+        {
+            return View("GestionCategorias");
+        }
+
+        public IActionResult GestionComent()
+        {
+            return View("GestionComent");
+        }
+
+        public IActionResult Estadisticas()
+        {
+            return View("Estadisticas");
+        }
+
+        public IActionResult Contactanos()
+        {
+            return View("Contactanos");
+        }
+
+        public IActionResult Listas()
+        {
+            return View("Listas");
         }
     }
       

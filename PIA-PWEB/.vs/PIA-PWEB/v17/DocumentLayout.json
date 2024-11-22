@@ -3,24 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\views\\gestionadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\views\\gestionadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\controllers\\gestionadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\controllers\\gestionadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\views\\shared\\_dashboardlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\views\\shared\\_dashboardlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\views\\gestionpeli\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\views\\gestionpeli\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\views\\listas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\views\\listas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\controllers\\gestionpelicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\controllers\\gestionpelicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\controllers\\gestionadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\controllers\\gestionadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\controllers\\gestioncategoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\controllers\\gestioncategoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\views\\gestioncoment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\views\\gestioncoment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\views\\dashboard\\contactanos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\views\\dashboard\\contactanos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\views\\dashboard\\estadisticas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\views\\dashboard\\estadisticas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\views\\dashboard\\miperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\views\\dashboard\\miperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\views\\gestionadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\views\\gestionadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\views\\gestioncategorias\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\views\\gestioncategorias\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\controllers\\listascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\controllers\\listascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|c:\\users\\emmad\\onedrive\\escritorio\\pia-programacionweb\\pia-pweb\\pia-pweb\\controllers\\gestioncomentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62A011D9-5D3C-49A8-BD7F-CE279DF571DA}|PIA-PWEB\\PIA-PWEB.csproj|solutionrelative:pia-pweb\\controllers\\gestioncomentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,16 +70,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GestionAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\GestionAdmin.cs",
-              "RelativeDocumentMoniker": "PIA-PWEB\\Controllers\\GestionAdmin.cs",
-              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\GestionAdmin.cs",
-              "RelativeToolTip": "PIA-PWEB\\Controllers\\GestionAdmin.cs",
+              "DocumentIndex": 4,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "PIA-PWEB\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "PIA-PWEB\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T23:28:24.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\Listas\\Index.cshtml",
+              "RelativeDocumentMoniker": "PIA-PWEB\\Views\\Listas\\Index.cshtml",
+              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\Listas\\Index.cshtml",
+              "RelativeToolTip": "PIA-PWEB\\Views\\Listas\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T20:11:54.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GestionPeliController.cs",
+              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\GestionPeliController.cs",
+              "RelativeDocumentMoniker": "PIA-PWEB\\Controllers\\GestionPeliController.cs",
+              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\GestionPeliController.cs",
+              "RelativeToolTip": "PIA-PWEB\\Controllers\\GestionPeliController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T20:00:18.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GestionCategoriasController.cs",
+              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\GestionCategoriasController.cs",
+              "RelativeDocumentMoniker": "PIA-PWEB\\Controllers\\GestionCategoriasController.cs",
+              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\GestionCategoriasController.cs",
+              "RelativeToolTip": "PIA-PWEB\\Controllers\\GestionCategoriasController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T19:54:17.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GestionAdminController.cs",
+              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\GestionAdminController.cs",
+              "RelativeDocumentMoniker": "PIA-PWEB\\Controllers\\GestionAdminController.cs",
+              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\GestionAdminController.cs",
+              "RelativeToolTip": "PIA-PWEB\\Controllers\\GestionAdminController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T16:38:46.34Z",
@@ -47,33 +139,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\GestionPeli\\Index.cshtml",
+              "RelativeDocumentMoniker": "PIA-PWEB\\Views\\GestionPeli\\Index.cshtml",
+              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\GestionPeli\\Index.cshtml",
+              "RelativeToolTip": "PIA-PWEB\\Views\\GestionPeli\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T20:22:23.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "_DashboardLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\Shared\\_DashboardLayout.cshtml",
               "RelativeDocumentMoniker": "PIA-PWEB\\Views\\Shared\\_DashboardLayout.cshtml",
               "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\Shared\\_DashboardLayout.cshtml",
               "RelativeToolTip": "PIA-PWEB\\Views\\Shared\\_DashboardLayout.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACYAAAB2AAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACkAAAB1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-21T23:36:34.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "PIA-PWEB\\Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "PIA-PWEB\\Controllers\\DashboardController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T23:28:24.449Z",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\GestionComent\\Index.cshtml",
+              "RelativeDocumentMoniker": "PIA-PWEB\\Views\\GestionComent\\Index.cshtml",
+              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\GestionComent\\Index.cshtml",
+              "RelativeToolTip": "PIA-PWEB\\Views\\GestionComent\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T20:01:44.419Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
+              "Title": "Contactanos.cshtml",
+              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\Dashboard\\Contactanos.cshtml",
+              "RelativeDocumentMoniker": "PIA-PWEB\\Views\\Dashboard\\Contactanos.cshtml",
+              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\Dashboard\\Contactanos.cshtml",
+              "RelativeToolTip": "PIA-PWEB\\Views\\Dashboard\\Contactanos.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T20:08:10.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Estadisticas.cshtml",
+              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\Dashboard\\Estadisticas.cshtml",
+              "RelativeDocumentMoniker": "PIA-PWEB\\Views\\Dashboard\\Estadisticas.cshtml",
+              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\Dashboard\\Estadisticas.cshtml",
+              "RelativeToolTip": "PIA-PWEB\\Views\\Dashboard\\Estadisticas.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T20:06:00.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MiPerfil.cshtml",
+              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\Dashboard\\MiPerfil.cshtml",
+              "RelativeDocumentMoniker": "PIA-PWEB\\Views\\Dashboard\\MiPerfil.cshtml",
+              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\Dashboard\\MiPerfil.cshtml",
+              "RelativeToolTip": "PIA-PWEB\\Views\\Dashboard\\MiPerfil.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T21:11:11.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\GestionAdmin\\Index.cshtml",
               "RelativeDocumentMoniker": "PIA-PWEB\\Views\\GestionAdmin\\Index.cshtml",
@@ -86,15 +230,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MiPerfil.cshtml",
-              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\Dashboard\\MiPerfil.cshtml",
-              "RelativeDocumentMoniker": "PIA-PWEB\\Views\\Dashboard\\MiPerfil.cshtml",
-              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\Dashboard\\MiPerfil.cshtml",
-              "RelativeToolTip": "PIA-PWEB\\Views\\Dashboard\\MiPerfil.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA0AAAA",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\GestionCategorias\\Index.cshtml",
+              "RelativeDocumentMoniker": "PIA-PWEB\\Views\\GestionCategorias\\Index.cshtml",
+              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Views\\GestionCategorias\\Index.cshtml",
+              "RelativeToolTip": "PIA-PWEB\\Views\\GestionCategorias\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T21:11:11.771Z",
+              "WhenOpened": "2024-11-22T19:53:52.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ListasController.cs",
+              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\ListasController.cs",
+              "RelativeDocumentMoniker": "PIA-PWEB\\Controllers\\ListasController.cs",
+              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\ListasController.cs",
+              "RelativeToolTip": "PIA-PWEB\\Controllers\\ListasController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T20:12:27.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GestionComentController.cs",
+              "DocumentMoniker": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\GestionComentController.cs",
+              "RelativeDocumentMoniker": "PIA-PWEB\\Controllers\\GestionComentController.cs",
+              "ToolTip": "C:\\Users\\emmad\\OneDrive\\Escritorio\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\Controllers\\GestionComentController.cs",
+              "RelativeToolTip": "PIA-PWEB\\Controllers\\GestionComentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T20:02:43.326Z",
               "EditorCaption": ""
             }
           ]
