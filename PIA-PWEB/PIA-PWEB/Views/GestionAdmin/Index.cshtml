@@ -1,101 +1,56 @@
-﻿@{
-    ViewData["Title"] = "Gestión de Administración y Privilegios";
-}
+﻿@model PIA_PWEB.Models.ViewModels.GestionAdminViewModel
+
 @{
+    ViewData["Title"] = "Gestión de Administradores";
     Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
 
-<h3>Gestion de Administradores</h3>
+<h1 class="text-center mb-4">Gestión de Administradores</h1>
 
-<!-- Formulario para buscar usuarios -->
-<form method="get" asp-action="BuscarUsuarios">
-    <div class="form-group">
-        <label for="busqueda">Buscar usuarios:</label>
-        <input type="text" id="busqueda" name="query" class="form-control" placeholder="Nombre, Apellido o Email">
-        <button type="submit" class="btn btn-primary mt-2">Buscar</button>
-    </div>
-</form>
-
-<hr>
-
-<!-- Tabla de Administradores -->
-<h3>Administradores</h3>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Apellidos</th>
-            <th>Email</th>
-            <th>Teléfono</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-       
-    </tbody>
-</table>
-
-<!-- Botón para agregar administrador -->
-<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalAgregar">Agregar Administrador</button>
-
-<hr>
-
-<!-- Tabla de Usuarios Normales -->
-<h3>Usuarios Normales</h3>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Apellidos</th>
-            <th>Email</th>
-            <th>Teléfono</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-     
-    </tbody>
-</table>
-
-<!-- Modal Agregar Administrador -->
-<div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="modalAgregarLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form method="post" asp-action="AgregarAdministrador">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalAgregarLabel">Agregar Administrador</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="Nombre" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="apellidos">Apellidos:</label>
-                        <input type="text" id="apellidos" name="Apellidos" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="Email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono">Teléfono:</label>
-                        <input type="text" id="telefono" name="Tel" class="form-control">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Guardar</button>
-                </div>
-            </form>
-        </div>
+<div class="row mb-3">
+    <div class="col-md-6">
+        <h3>Total de usuarios registrados: @Model.TotalUsuarios</h3>
     </div>
 </div>
 
-
-<script>
-    function cargarDatos(idUsuario) {
-        // Lógica para cargar datos al modal de edición
-        // Puedes implementar con una llamada AJAX o pasar la información al modelo de backend
-    }
-</script>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre de Usuario</th>
+            <th>Apellidos</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model.Usuarios)
+        {
+            <tr>
+                <td>@usuario.UserName</td>
+                <td>@usuario.Apellidos</td>
+                <td>@usuario.Email</td>
+                <td>@usuario.PhoneNumber</td>
+                <td>@usuario.Rol</td>
+                <td>
+                    @if (usuario.Rol != "Administrador")
+                    {
+                        <form asp-action="HacerAdministrador" asp-route-id="@usuario.Id" method="post" class="d-inline">
+                            <button class="btn btn-success btn-sm">Hacer Administrador</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form asp-action="RemoverAdministrador" asp-route-id="@usuario.Id" method="post" class="d-inline">
+                            <button class="btn btn-warning btn-sm">Remover como Administrador</button>
+                        </form>
+                    }
+                    <form asp-action="EliminarUsuario" asp-route-id="@usuario.Id" method="post" class="d-inline">
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
