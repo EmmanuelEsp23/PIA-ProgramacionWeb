@@ -1,8 +1,37 @@
-﻿@{
-    ViewData["Title"] = "Gestión de Comentarios";
-}
+﻿@model IEnumerable<PIA_PWEB.Models.dbModels.Reseña>
+
 @{
+    ViewData["Title"] = "Gestión de Comentarios";
+
     Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
 
-    <h1 class="text-center mb-4">Gestión de Comentarios</h1>
+<h1 class="text-center mb-4">Gestión de Comentarios</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Película</th>
+            <th>Comentario</th>
+            <th>Fecha de Publicación</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reseña in Model)
+        {
+            <tr>
+                <td>@reseña.NombreUsuario</td> <!-- Se agrega como propiedad en el modelo -->
+                <td>@reseña.NombrePelicula</td> <!-- Relación Película-Reseña -->
+                <td>@reseña.Contenido</td>
+                <td>@reseña.FechaPublicacion?.ToString("dd/MM/yyyy") ?? "Sin fecha"</td>
+                <td>
+                    <form asp-action="Eliminar" asp-route-idUsuario="@reseña.IdUsuario" asp-route-idPelicula="@reseña.IdPelicula" method="post">
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
