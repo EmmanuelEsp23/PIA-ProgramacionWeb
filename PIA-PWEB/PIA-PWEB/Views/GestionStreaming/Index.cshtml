@@ -1,8 +1,103 @@
-﻿@{
-    ViewData["Title"] = "Gestión de Streaming";
-}
+﻿@model IEnumerable<PIA_PWEB.Models.dbModels.Streaming>
+
 @{
+    ViewData["Title"] = "Gestión de Streaming";
     Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
 
-    <h1 class="text-center mb-4">Gestión de servicios de streaming</h1>
+<h1 class="text-center mb-4">Gestión de Servicios de Streaming</h1>
+
+<!-- Botón para agregar nuevo servicio -->
+<button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalCrearStreaming">Agregar Nuevo Servicio</button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var streaming in Model)
+        {
+            <tr>
+                <td>@streaming.IdStreaming</td>
+                <td>@streaming.NombreStreaming</td>
+                <td>
+                    <!-- Botón para abrir el modal de edición -->
+                    <button class="btn btn-warning btn-sm"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalEditarStreaming"
+                            onclick="cargarStreaming(@streaming.IdStreaming, '@streaming.NombreStreaming')">
+                        Editar
+                    </button>
+
+                    <!-- Botón para eliminar -->
+                    <form asp-action="EliminarStreaming" asp-route-id="@streaming.IdStreaming" method="post" style="display:inline-block;">
+                        <button type="submit" class="btn btn-danger btn-sm"
+                                onclick="return confirm('¿Estás seguro de que deseas eliminar este servicio de streaming?');">
+                            Eliminar
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal para Crear Nuevo Servicio -->
+<div class="modal fade" id="modalCrearStreaming" tabindex="-1" aria-labelledby="modalCrearLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="CrearStreaming" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCrearLabel">Agregar Nuevo Servicio de Streaming</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nombreStreamingCrear" class="form-label">Nombre del Servicio</label>
+                        <input type="text" class="form-control" id="nombreStreamingCrear" name="NombreStreaming" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Editar Servicio -->
+<div class="modal fade" id="modalEditarStreaming" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="EditarStreaming" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarLabel">Editar Servicio de Streaming</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="streamingIdEditar" name="IdStreaming" />
+                    <div class="mb-3">
+                        <label for="nombreStreamingEditar" class="form-label">Nombre del Servicio</label>
+                        <input type="text" class="form-control" id="nombreStreamingEditar" name="NombreStreaming" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function cargarStreaming(id, nombre) {
+        document.getElementById('streamingIdEditar').value = id;
+        document.getElementById('nombreStreamingEditar').value = nombre;
+    }
+</script>

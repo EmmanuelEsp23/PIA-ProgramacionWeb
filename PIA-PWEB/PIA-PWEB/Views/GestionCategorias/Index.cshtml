@@ -9,7 +9,7 @@
 
 <h1 class="text-center mb-4">Gestión de Categorias</h1>
 
-<a class="btn btn-primary mb-3" asp-action="CrearCategoria" asp-controller="GestionCategorias">Crear Nueva Categoría</a>
+<a class="btn btn-success mb-3" asp-action="CrearCategoria" asp-controller="GestionCategorias">Crear Nueva Categoría</a>
 
 <table class="table table-striped">
     <thead>
@@ -27,7 +27,7 @@
                 <td>@categoria.NombreCategoria</td>
                 <td>
                     <!-- Botón para abrir el modal de edición -->
-                    <button class="btn btn-warning btn-sm" 
+                    <button class="btn btn-info btn-sm" 
                             data-bs-toggle="modal" 
                             data-bs-target="#modalEditarCategoria" 
                             onclick="cargarCategoria(@categoria.IdCategoria, '@categoria.NombreCategoria')">Editar</button>
