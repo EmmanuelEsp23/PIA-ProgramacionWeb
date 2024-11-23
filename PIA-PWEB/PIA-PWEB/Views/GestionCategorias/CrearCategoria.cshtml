@@ -1,0 +1,18 @@
+﻿@model PIA_PWEB.Models.dbModels.Categorium 
+
+@{
+    ViewData["Title"] = "Crear Categoría";
+}
+
+<h1>Crear Nueva Categoría</h1>
+
+<form asp-action="CrearCategoria" method="post">
+
+    <div class="form-group">
+        <label for="NombreCategoria">Nombre de la Categoría</label>
+        <input type="text" class="form-control" id="NombreCategoria" name="NombreCategoria" required />
+    </div>
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a class="btn btn-secondary" asp-action="Index">Cancelar</a>
+
+</form>

@@ -5,3 +5,24 @@
     a.nav-link text-dark {
         color: white;
     }
+
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+
+    .nav-link:hover {
+        color: #cfd8dc;
+        background-color: #343a40;
+        border-radius: 5px;
+    }
+
+
+    .nav-link.btn:hover {
+        background-color: #e57373;
+        color: #343a40;
+        border: none;
+    }
