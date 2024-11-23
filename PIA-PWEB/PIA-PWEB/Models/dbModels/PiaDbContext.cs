@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PIA_PWEB.Data;
 
 namespace PIA_PWEB.Models.dbModels;
 
@@ -133,4 +134,9 @@ public partial class PiaDbContext : IdentityDbContext<ApplicationUser, IdentityR
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    public static implicit operator PiaDbContext(ApplicationDbContext v)
+    {
+        throw new NotImplementedException();
+    }
 }

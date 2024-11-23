@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PIA-PWEB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8b7bc7a59c5b81cc8fba6c58d7a9e5da09438e4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9734abfec43d630a0ee4e816e39e598a9194c146")]
 [assembly: System.Reflection.AssemblyProductAttribute("PIA-PWEB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PIA-PWEB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
