@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace PIA_PWEB.Controllers
 {
-    public class ListasController : Controller
+    public class MiPerfilController : Controller
     {
         [Authorize]
         public IActionResult Index()
