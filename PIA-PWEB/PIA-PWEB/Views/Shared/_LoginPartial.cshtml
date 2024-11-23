@@ -3,25 +3,89 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
-<ul class="navbar-nav">
-@if (SignInManager.IsSignedIn(User))
-{
-    <li class="nav-item">
-        <a  class="nav-link text-white" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
-    </li>
-    <li class="nav-item">
-        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-            <button  type="submit" class="nav-link btn btn-link text-white">Logout</button>
-        </form>
-    </li>
-}
-else
-{
-    <li class="nav-item">
-        <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </li>
-}
+<ul class="navbar-nav flex-grow-1 d-flex justify-content-between">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var user = await UserManager.GetUserAsync(User);
+        if (await UserManager.IsInRoleAsync(user, "Admin"))
+        {
+            <!-- Opciones exclusivas para administradores -->
+
+            <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-controller="GestionPeli" asp-action="Index">Gestión de Peliculas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-controller="GestionCategorias" asp-action="Index">Gestión de Categorías</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-controller="GestionComent" asp-action="Index">Comentarios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-controller="GestionStreaming" asp-action="Index">Streaming</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-controller="Dashboard" asp-action="Estadisticas">Estadísticas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-controller="GestionAdmin" asp-action="Index">Administradores</a>
+            </li>
+
+
+        }
+
+        <!-- Opciones generales para usuarios autenticados -->
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="" asp-controller="MiPerfil" asp-action="Index">Mi Perfil</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="" asp-controller="Listas" asp-action="Index">Listas</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="" asp-controller="Dashboard" asp-action="Buscar">Buscar</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="" asp-controller="Dashboard" asp-action="Contactanos">Contactanos</a>
+        </li>
+
+        <li class="nav-item">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-link text-white">Logout</button>
+            </form>
+        </li>
+    }
+
+    else
+    {
+
+        <!-- Opciones para usuarios no autenticados -->
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="" asp-controller="Dashboard" asp-action="Buscar">Buscar</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="" asp-controller="Dashboard" asp-action="Contactanos">Contactanos</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
 </ul>

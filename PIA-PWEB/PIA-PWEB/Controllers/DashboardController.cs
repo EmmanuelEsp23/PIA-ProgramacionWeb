@@ -48,6 +48,11 @@ namespace PIA_PWEB.Controllers
         {
             return View("Listas");
         }
+
+        public IActionResult Buscar()
+        {
+            return View("Buscar");
+        }
     }
       
 }
