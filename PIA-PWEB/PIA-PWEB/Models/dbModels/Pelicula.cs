@@ -39,6 +39,7 @@ public partial class Pelicula
     [Column("idStreaming")]
     public int IdStreaming { get; set; }
 
+
     [InverseProperty("IdPeliculaNavigation")]
     public virtual ICollection<Calificacione> Calificaciones { get; set; } = new List<Calificacione>();
 
@@ -46,6 +47,7 @@ public partial class Pelicula
     [InverseProperty("Peliculas")]
     public virtual Categorium IdCategoriaNavigation { get; set; } = null!;
 
+    
     [ForeignKey("IdStreaming")]
     [InverseProperty("Peliculas")]
     public virtual Streaming IdStreamingNavigation { get; set; } = null!;

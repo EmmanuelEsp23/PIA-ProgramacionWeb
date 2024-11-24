@@ -657,6 +657,11 @@ namespace PIA_PWEB.Migrations
                 {
                     b.Navigation("Peliculas");
                 });
+
+            modelBuilder.Entity<Pelicula>()
+        .Property(p => p.IdPelicula)
+        .ValueGeneratedOnAdd(); // Esto indica que el valor se genera automáticamente
+
 #pragma warning restore 612, 618
         }
     }
