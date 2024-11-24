@@ -186,6 +186,46 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Dashboard/Buscar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEJ1c2Nhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Dashboard/Contactanos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXENvbnRhY3Rhbm9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Dashboard/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Dashboard/Estadisticas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVzdGFkaXN0aWNhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/GestionAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvbkFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/GestionCategorias/CrearCategoria.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvbkNhdGVnb3JpYXNcQ3JlYXJDYXRlZ29yaWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/GestionCategorias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvbkNhdGVnb3JpYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/GestionComent/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvbkNvbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/GestionPeli/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvblBlbGlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/GestionStreaming/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvblN0cmVhbWluZ1xJbmRleC5jc2h0bWw=
+=======
 [C:/Users/emmad/OneDrive/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Dashboard/Buscar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEJ1c2Nhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -200,6 +240,7 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/emmad/OneDrive/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Dashboard/Estadisticas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVzdGFkaXN0aWNhcy5jc2h0bWw=
+>>>>>>> ae330845cb2709b18e02308cc66a505bca9180ef
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emmad/OneDrive/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/GestionAdmin/Index.cshtml]
@@ -238,6 +279,25 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Listas/CrearLista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFzXENyZWFyTGlzdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Listas/EditarLista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFzXEVkaXRhckxpc3RhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Listas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/MiPerfil/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlQZXJmaWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deyaa/OneDrive/Imágenes/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Shared/Error.cshtml]
+=======
 [C:/Users/emmad/OneDrive/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Listas/CrearLista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFzXENyZWFyTGlzdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -255,6 +315,7 @@ build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlQZXJmaWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emmad/OneDrive/Escritorio/PIA-ProgramacionWeb/PIA-PWEB/PIA-PWEB/Views/Shared/Error.cshtml]
+>>>>>>> ae330845cb2709b18e02308cc66a505bca9180ef
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
