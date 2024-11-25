@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PIA_PWEB.Models;
 using System.Diagnostics;
 
@@ -28,5 +28,5 @@ namespace PIA_PWEB.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-    }
+    } 
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BA6jbAITLEo=",
+  "dgSpecHash": "6lOhQosbFoc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\emman\\Desktop\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj",
+  "projectFilePath": "C:\\Users\\emman\\Desktop\\PIA-ProgramacionWeb2\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emman\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\emman\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

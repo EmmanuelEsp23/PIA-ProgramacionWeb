@@ -889,3 +889,16 @@ C:\Users\emman\Desktop\PIA-ProgramacionWeb\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PI
 C:\Users\emman\Desktop\PIA-ProgramacionWeb\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\ref\PIA-PWEB.dll
 >>>>>>> ae330845cb2709b18e02308cc66a505bca9180ef
 >>>>>>> fa48c1740e92ce75083a79bbb382ac5d6bcdf3c1
+C:\Users\emman\Desktop\PIA-ProgramacionWeb2\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.csproj.AssemblyReference.cache
+C:\Users\emman\Desktop\PIA-ProgramacionWeb2\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emman\Desktop\PIA-ProgramacionWeb2\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.AssemblyInfoInputs.cache
+C:\Users\emman\Desktop\PIA-ProgramacionWeb2\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.AssemblyInfo.cs
+C:\Users\emman\Desktop\PIA-ProgramacionWeb2\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.csproj.CoreCompileInputs.cache
+C:\Users\emman\Desktop\PIA-ProgramacionWeb2\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\emman\Desktop\PIA-ProgramacionWeb2\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\emman\Desktop\PIA-ProgramacionWeb2\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.RazorAssemblyInfo.cache
+C:\Users\emman\Desktop\PIA-ProgramacionWeb2\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.RazorAssemblyInfo.cs
+C:\Users\emman\Desktop\PIA-ProgramacionWeb2\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.sourcelink.json
+C:\Users\emman\Desktop\PIA-ProgramacionWeb2\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.dll
+C:\Users\emman\Desktop\PIA-ProgramacionWeb2\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\refint\PIA-PWEB.dll
+C:\Users\emman\Desktop\PIA-ProgramacionWeb2\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.pdb

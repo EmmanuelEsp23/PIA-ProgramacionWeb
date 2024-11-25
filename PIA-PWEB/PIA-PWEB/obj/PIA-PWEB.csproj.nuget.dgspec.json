@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emman\\Desktop\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj": {}
+    "C:\\Users\\emman\\Desktop\\PIA-ProgramacionWeb2\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emman\\Desktop\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj": {
+    "C:\\Users\\emman\\Desktop\\PIA-ProgramacionWeb2\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emman\\Desktop\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj",
+        "projectUniqueName": "C:\\Users\\emman\\Desktop\\PIA-ProgramacionWeb2\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj",
         "projectName": "PIA-PWEB",
-        "projectPath": "C:\\Users\\emman\\Desktop\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj",
+        "projectPath": "C:\\Users\\emman\\Desktop\\PIA-ProgramacionWeb2\\PIA-PWEB\\PIA-PWEB\\PIA-PWEB.csproj",
         "packagesPath": "C:\\Users\\emman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emman\\Desktop\\PIA-ProgramacionWeb\\PIA-PWEB\\PIA-PWEB\\obj\\",
+        "outputPath": "C:\\Users\\emman\\Desktop\\PIA-ProgramacionWeb2\\PIA-PWEB\\PIA-PWEB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\emman\\AppData\\Roaming\\NuGet\\NuGet.Config",
