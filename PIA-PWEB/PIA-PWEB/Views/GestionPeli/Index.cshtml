@@ -1,77 +1,113 @@
-﻿@{
+﻿@model IEnumerable<PIA_PWEB.Models.ViewModels.GestionPeliViewModel>
+
+
+@{
     ViewData["Title"] = "Gestión de Peliculas";
 }
 @{
     Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
+
 <div class="container my-4">
     <h1 class="text-center mb-4">Gestión de Películas</h1>
     <br>
-    <button class="btn btn-success ms-3" data-bs-toggle="modal" data-bs-target="#agregarModal">
-        <i class="fa-sharp fa-solid fa-plus">Agregar</i>
-    </button>
-    <br>
-    <br>
-    
-    <table class="table table-bordered">
-        <thead>
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Año de Lanzamiento</th>
+            <th>Director</th>
+            <th>Categorías</th>
+            <th>Streaming</th>
+            <th>Portada</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pelicula in Model)
+        {
             <tr>
-                <th>Título</th>
-                <th>Año</th>
-                <th>Director</th>
-                <th>Categoría</th>
-                <th>Stream</th>
-                <th>Portada</th>
-                <th>Acciones</th>
+                <td>@pelicula.NombrePelicula</td>
+                <td>@pelicula.FechaLanzamiento.ToString("yyyy")</td>
+                <td>@pelicula.Director</td>
+                    <td>@(pelicula.CategoriaNombre ?? "Sin categoría")</td>
+                    <td>@(pelicula.StreamingNombre ?? "Sin plataforma")</td>
+                <td><img src="@pelicula.Portada" alt="Portada" style="width: 100px; height: auto;" /></td>
+                <td>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal-@pelicula.IdPelicula">Editar</button>
+                    <form asp-action="Eliminar" asp-route-id="@pelicula.IdPelicula" method="post" style="display: inline;">
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </td>
             </tr>
-        </thead>
-        <tbody id="tablaPeliculas">
-            <!-- Las películas se van a agregar  aquí -->
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
 </div>
 
-<!-- Modal para Agregar/Editar Película -->
-<div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="agregarModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="agregarModalLabel">Agregar Película</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Formulario para agregar o editar -->
-                <form id="formPelicula">
-                    <div class="mb-3">
-                        <label for="titulo" class="form-label">Título</label>
-                        <input type="text" class="form-control" id="titulo" required>
+<a asp-action="AgregarPelicula" class="btn btn-success">Agregar Película</a>
+
+<!-- Modal para edición -->
+@foreach (var pelicula in Model)
+{
+    <div class="modal fade" id="editModal-@pelicula.IdPelicula" tabindex="-1" aria-labelledby="editModalLabel-@pelicula.IdPelicula" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel-@pelicula.IdPelicula">Editar Película</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form asp-action="EditarPelicula" method="post" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <input type="hidden" name="IdPelicula" value="@pelicula.IdPelicula" />
+                        <div class="mb-3">
+                            <label for="NombrePelicula" class="form-label">Título</label>
+                            <input type="text" name="NombrePelicula" value="@pelicula.NombrePelicula" class="form-control" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="FechaLanzamiento" class="form-label">Año de Lanzamiento</label>
+                            <input type="date" name="FechaLanzamiento" value="@pelicula.FechaLanzamiento.ToString("yyyy-MM-dd")" class="form-control" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="Director" class="form-label">Director</label>
+                            <input type="text" name="Director" value="@pelicula.Director" class="form-control" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="IdCategoria" class="form-label">Categoría</label>
+                            <select name="IdCategoria" class="form-select">
+                                 @foreach (var categoria in ViewBag.Categorias)
+                                 {
+                                        <option value="@categoria.IdCategoria"
+                                                selected="@(pelicula.IdCategoria == categoria.IdCategoria ? "selected" : null)">
+                                            @categoria.NombreCategoria
+                                        </option>
+
+                                 }
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="IdStreaming" class="form-label">Plataforma</label>
+                            <select name="IdStreaming" class="form-select">
+                                @foreach (var streaming in ViewBag.Streamings)
+                                {
+                                        <option value="@streaming.IdStreaming"
+                                                selected="@(pelicula.IdStreaming == streaming.IdStreaming ? "selected" : null)">
+                                            @streaming.NombreStreaming
+                                        </option>
+                                }
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Portada" class="form-label">Portada</label>
+                            <input type="text" name="Portada" class="form-control" />
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="anio" class="form-label">Año</label>
-                        <input type="number" class="form-control" id="anio" required>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
-                    <div class="mb-3">
-                        <label for="director" class="form-label">Director</label>
-                        <input type="text" class="form-control" id="director" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="categoria" class="form-label">Categoría</label>
-                        <input type="text" class="form-control" id="categoria" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="stream" class="form-label">Stream</label>
-                        <input type="text" class="form-control" id="stream" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="portada" class="form-label">Portada (URL)</label>
-                        <input type="text" class="form-control" id="portada" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
                 </form>
             </div>
         </div>
     </div>
-</div>
-
-
-<script src="~/js/GestionPeli.js"></script>
+}
