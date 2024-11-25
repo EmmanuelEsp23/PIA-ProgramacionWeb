@@ -13,7 +13,7 @@ namespace PIA_PWEB.Migrations
 {
     [DbContext(typeof(PiaDbContext))]
     [Migration("20241114234911_init")]
-    partial class init
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

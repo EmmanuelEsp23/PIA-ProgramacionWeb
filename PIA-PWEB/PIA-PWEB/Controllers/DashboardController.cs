@@ -8,8 +8,6 @@ namespace PIA_PWEB.Controllers
 {
     public class DashboardController : Controller
     {
-
-
         public IActionResult MiPerfil()
         {
             return View("MiPerfil");

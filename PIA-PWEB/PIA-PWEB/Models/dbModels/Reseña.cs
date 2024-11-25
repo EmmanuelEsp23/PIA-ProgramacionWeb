@@ -31,6 +31,6 @@ public partial class Reseña
     public virtual ApplicationUser IdUsuarioNavigation { get; set; } = null!;
 
     // Propiedades adicionales para mostrar en la vista
-    public string NombreUsuario { get; set; } // Nombre del usuario
-    public string NombrePelicula { get; set; } // Nombre de la película
+    public required string NombreUsuario { get; set; } // Nombre del usuario
+    public required string NombrePelicula { get; set; } // Nombre de la película
 }

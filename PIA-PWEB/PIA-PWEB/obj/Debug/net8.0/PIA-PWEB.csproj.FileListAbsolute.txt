@@ -593,7 +593,6 @@ C:\Users\emmad\OneDrive\Escritorio\PIA-ProgramacionWeb\PIA-PWEB\PIA-PWEB\obj\Deb
 C:\Users\emmad\OneDrive\Escritorio\PIA-ProgramacionWeb\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.pdb
 C:\Users\emmad\OneDrive\Escritorio\PIA-ProgramacionWeb\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.genruntimeconfig.cache
 C:\Users\emmad\OneDrive\Escritorio\PIA-ProgramacionWeb\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\ref\PIA-PWEB.dll
-<<<<<<< HEAD
 C:\Users\emman\Desktop\PIA-ProgramacionWeb\PIA-PWEB\PIA-PWEB\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\emman\Desktop\PIA-ProgramacionWeb\PIA-PWEB\PIA-PWEB\bin\Debug\net8.0\appsettings.json
 C:\Users\emman\Desktop\PIA-ProgramacionWeb\PIA-PWEB\PIA-PWEB\bin\Debug\net8.0\PIA-PWEB.staticwebassets.runtime.json
@@ -888,6 +887,5 @@ C:\Users\emman\Desktop\PIA-ProgramacionWeb\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\re
 C:\Users\emman\Desktop\PIA-ProgramacionWeb\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.pdb
 C:\Users\emman\Desktop\PIA-ProgramacionWeb\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\PIA-PWEB.genruntimeconfig.cache
 C:\Users\emman\Desktop\PIA-ProgramacionWeb\PIA-PWEB\PIA-PWEB\obj\Debug\net8.0\ref\PIA-PWEB.dll
-=======
 >>>>>>> ae330845cb2709b18e02308cc66a505bca9180ef
 >>>>>>> fa48c1740e92ce75083a79bbb382ac5d6bcdf3c1
