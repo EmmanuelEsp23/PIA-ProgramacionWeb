@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PIA_PWEB.Models.dbModels;
+using PIA_PWEB.Models.ViewModels;
 using System.Threading.Tasks;
 
 //Controlador de acciones CRUD con peliculas
@@ -18,120 +19,116 @@ namespace PIA_PWEB.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var peliculas = await _context.Peliculas
-                .Include(p => p.IdCategoriaNavigation)
-                .Include(p => p.IdStreamingNavigation)
-                .Include(p => p.IdUsuarioNavigation)
-                .ToListAsync();
-            return View(peliculas);
+            var peliculas = _context.Peliculas
+    .Include(p => p.IdCategoriaNavigation) // Usar la propiedad de navegación restante
+    .Include(p => p.IdStreamingNavigation) // Usar la propiedad de navegación restante
+    .Select(p => new GestionPeliViewModel
+    {
+        IdPelicula = p.IdPelicula,
+        NombrePelicula = p.NombrePelicula,
+        FechaLanzamiento = p.FechaLanzamiento,
+        Director = p.Director,
+        Portada = p.Portada,
+        IdCategoria = p.IdCategoria,
+        CategoriaNombre = p.IdCategoriaNavigation.NombreCategoria, // Cambiado
+        IdStreaming = p.IdStreaming,
+        StreamingNombre = p.IdStreamingNavigation.NombreStreaming  // Cambiado
+    }).ToList();
+
+            ViewBag.Categorias = _context.Categoria.ToList();
+            ViewBag.Streamings = _context.Streamings.ToList();
+            return View("Index", peliculas);
         }
 
-        public async Task<IActionResult> Detalles(int id)
+        public IActionResult AgregarPelicula()
         {
-            var pelicula = await _context.Peliculas
-                .Include(p => p.IdCategoriaNavigation)
-                .Include(p => p.IdStreamingNavigation)
-                .Include(p => p.IdUsuarioNavigation)
-                .FirstOrDefaultAsync(m => m.IdPelicula == id);
-
-            if (pelicula == null)
-            {
-                return NotFound();
-            }
-            return View(pelicula);
-        }
-
-        public IActionResult Crear()
-        {
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "IdCategoria", "NombreCategoria");
-            ViewData["IdStreaming"] = new SelectList(_context.Streamings, "IdStreaming", "NombreStreaming");
-            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "UserName");
+            ViewBag.Usuario = _context.Users.ToList();
+            ViewBag.Categorias = _context.Categoria.ToList();
+            ViewBag.Streamings = _context.Streamings.ToList();
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Crear(Pelicula pelicula)
+        public IActionResult AgregarPelicula(GestionPeliViewModel model)
         {
+
+            Console.WriteLine("La acción AgregarPelicula fue llamada");
+
             if (ModelState.IsValid)
             {
-                _context.Add(pelicula);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "IdCategoria", "NombreCategoria", pelicula.IdCategoria);
-            ViewData["IdStreaming"] = new SelectList(_context.Streamings, "IdStreaming", "NombreStreaming", pelicula.IdStreaming);
-            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "UserName", pelicula.IdUsuario);
-            return View(pelicula);
-        }
+                var pelicula = new Pelicula
+                {
+                    NombrePelicula = model.NombrePelicula,
+                    FechaLanzamiento = model.FechaLanzamiento,
+                    Director = model.Director,
+                    IdCategoria = model.IdCategoria,
+                    Descripcion = model.Descripcion,
+                    IdStreaming = model.IdStreaming,
+                    Portada = model.Portada,
+                    IdUsuario = model.IdUsuario
+                };
 
-        public async Task<IActionResult> Editar(int id)
-        {
-            var pelicula = await _context.Peliculas.FindAsync(id);
-            if (pelicula == null)
-            {
-                return NotFound();
+                _context.Peliculas.Add(pelicula);
+                Console.WriteLine($"Nueva Película: {pelicula.NombrePelicula}, ID: {pelicula.IdPelicula}");
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+
             }
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "IdCategoria", "NombreCategoria", pelicula.IdCategoria);
-            ViewData["IdStreaming"] = new SelectList(_context.Streamings, "IdStreaming", "NombreStreaming", pelicula.IdStreaming);
-            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "UserName", pelicula.IdUsuario);
-            return View(pelicula);
+
+            if (!ModelState.IsValid)
+            {
+                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    Console.WriteLine($"Error: {error.ErrorMessage}");
+                }
+            }
+
+            ViewBag.Usuario = _context.Users.ToList();
+            ViewBag.Categorias = _context.Categoria.ToList();
+            ViewBag.Streamings = _context.Streamings.ToList();
+            return View(model);
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Editar(int id, Pelicula pelicula)
+        public IActionResult EditarPelicula(GestionPeliViewModel model)
         {
-            if (id != pelicula.IdPelicula)
-            {
-                return BadRequest();
-            }
-
             if (ModelState.IsValid)
             {
-                try
+                var pelicula = _context.Peliculas
+    .Include(p => p.IdCategoriaNavigation)
+    .Include(p => p.IdStreamingNavigation)
+    .FirstOrDefault(p => p.IdPelicula == model.IdPelicula);
+
+                if (pelicula != null)
                 {
-                    _context.Update(pelicula);
-                    await _context.SaveChangesAsync();
+                    pelicula.NombrePelicula = model.NombrePelicula;
+                    pelicula.FechaLanzamiento = model.FechaLanzamiento;
+                    pelicula.Director = model.Director;
+                    pelicula.IdCategoria = model.IdCategoria;
+                    pelicula.IdStreaming = model.IdStreaming;
+                    pelicula.Portada = model.Portada;
+
+                    _context.SaveChanges();
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PeliculaExists(pelicula.IdPelicula))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
             }
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "IdCategoria", "NombreCategoria", pelicula.IdCategoria);
-            ViewData["IdStreaming"] = new SelectList(_context.Streamings, "IdStreaming", "NombreStreaming", pelicula.IdStreaming);
-            ViewData["IdUsuario"] = new SelectList(_context.Users, "Id", "UserName", pelicula.IdUsuario);
-            return View(pelicula);
+
+            return RedirectToAction("Index");
         }
 
-        public async Task<IActionResult> Eliminar(int id)
+        [HttpPost]
+        public IActionResult Eliminar(int id)
         {
-            var pelicula = await _context.Peliculas.FindAsync(id);
-            if (pelicula == null)
+            var pelicula = _context.Peliculas.Find(id);
+            if (pelicula != null)
             {
-                return NotFound();
+                _context.Peliculas.Remove(pelicula);
+                _context.SaveChanges();
             }
 
-            _context.Peliculas.Remove(pelicula);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool PeliculaExists(int id)
-        {
-            return _context.Peliculas.Any(e => e.IdPelicula == id);
+            return RedirectToAction("Index");
         }
     }
 }

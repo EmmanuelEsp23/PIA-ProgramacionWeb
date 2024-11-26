@@ -26,9 +26,9 @@ namespace PIA_PWEB.Controllers
             return View("GestionCategorias");
         }
 
-        public IActionResult GestionComent()
+        public IActionResult GestionComments()
         {
-            return View("GestionComent");
+            return View("GestionComments");
         }
 
         public IActionResult Estadisticas()

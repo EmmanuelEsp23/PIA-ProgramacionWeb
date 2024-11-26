@@ -14,32 +14,40 @@ namespace PIA_PWEB.Controllers
         {
             _context = context;
         }
-
-        public async Task<IActionResult> Resenas()
+        // GET: GestionComent
+        public IActionResult Index()
         {
-            var reseñas = await _context.Reseñas
-                .Include(r => r.IdUsuarioNavigation)
-                .Include(r => r.IdPeliculaNavigation)
-                .ToListAsync();
+            // Cargar las reseñas con los nombres del usuario y película
+            var reseñas = (from r in _context.Reseñas
+                           join u in _context.Users on r.IdUsuario equals u.Id
+                           join p in _context.Peliculas on r.IdPelicula equals p.IdPelicula
+                           select new Reseña
+                           {
+                               IdUsuario = r.IdUsuario,
+                               IdPelicula = r.IdPelicula,
+                               Contenido = r.Contenido,
+                               FechaPublicacion = r.FechaPublicacion,
+                               NombreUsuario = u.UserName, // Agregado para mostrar en la vista
+                               NombrePelicula = p.NombrePelicula // Agregado para mostrar en la vista
+                           }).ToList();
 
             return View(reseñas);
         }
 
+        // POST: GestionComent/Eliminar
         [HttpPost]
-        public async Task<IActionResult> Eliminar(int idUsuario, int idPelicula)
+        [ValidateAntiForgeryToken]
+        public IActionResult Eliminar(int idUsuario, int idPelicula)
         {
-            var reseña = await _context.Reseñas
-                .FirstOrDefaultAsync(r => r.IdUsuario == idUsuario && r.IdPelicula == idPelicula);
-
+            var reseña = _context.Reseñas.FirstOrDefault(r => r.IdUsuario == idUsuario && r.IdPelicula == idPelicula);
             if (reseña == null)
             {
                 return NotFound();
             }
 
             _context.Reseñas.Remove(reseña);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction(nameof(Resenas));
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

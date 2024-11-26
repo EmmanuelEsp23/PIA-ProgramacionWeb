@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "Mi Perfil";
+}
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+@model PIA_WEB.Models.Usuario
+
+
+<div class="container mt-5">
+    <div class="row"> 
+        <h2 class="mb-4">Mi Perfil</h2>
+        <!-- Foto de perfil -->
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <div class="text-center">
+                <!-- Icono de perfil por defecto -->
+                <img src="default-profile.jpg" alt="Foto de perfil" id="profilePic" class="fa fa-circle-user fa-5x" style="width: 150px; height: 150px; object-fit: cover; display: none;">
+                <i id="profileIcon" class="fa-solid fa-circle-user fa-5x" style="font-size: 150px;"></i>
+                <br>
+                <br>
+                <!-- Botón para cambiar foto (debajo del icono) -->
+                <button class="btn btn-outline-primary mt-3" onclick="document.getElementById('fileInput').click();">
+                    <i class="fas fa-camera"></i> Cambiar foto
+                </button>
+
+                <!-- Input invisible para seleccionar la imagen -->
+                <input type="file" id="fileInput" style="display: none;" onchange="changeProfilePic(event)">
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="user-info">
+               
+                <p><strong>Nombre:</strong> <span id="userName">--</span></p>
+
+                <p><strong>Apellidos:</strong> <span id="userApellido">--</span></p>
+
+                <p><strong>Fecha de Nacimiento:</strong> <span id="userFechaNa">---</span></p>
+
+                <p><strong>Email:</strong> <span id="userEmail">---</span></p>
+               
+                <p><strong>Teléfono:</strong> <span id="userPhone">---</span></p>
+
+                <p><strong>Contraseña:</strong> <span id="userPassword">---</span></p>
+               
+            </div>
+            <!-- Botón para abrir el modal -->
+            <button class="btn btn-primary" id="editButton">Editar Perfil</button>
+        </div>
+    </div>
+</div>
+<!-- Modal para editar perfil -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Editar Perfil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("EditProfile", "Usuarios", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(model => model.IdUsuario)
+
+                    <div class="form-group">
+                        <label for="editName">Nombre:</label>
+                        @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                    <div class="form-group">
+                        <label for="editApellido">Apellidos:</label>
+                        @Html.EditorFor(model => model.Apellidos, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                    <div class="form-group">
+                        <label for="editFechaNa">Fecha de nacimiento:</label>
+                        @Html.EditorFor(model => model.FechaNacimiento, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                    <div class="form-group">
+                        <label for="editEmail">Email:</label>
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                    <div class="form-group">
+                        <label for="editPhone">Teléfono:</label>
+                        @Html.EditorFor(model => model.Tel, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                    <div class="form-group">
+                        <label for="editPassword">Contraseña:</label>
+                        @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/MiPerfil.js"></script>

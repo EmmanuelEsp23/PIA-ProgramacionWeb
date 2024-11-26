@@ -2,7 +2,7 @@
 
 namespace PIA_PWEB.Controllers
 {
-    public class PerfilController : Controller
+    public class MiPerfilController : Controller
     {
         public IActionResult Index()
         {
