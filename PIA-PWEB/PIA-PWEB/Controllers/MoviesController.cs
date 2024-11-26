@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PIA_PWEB.Models.dbModels;
 using PIA_PWEB.Models.ViewModels;
@@ -56,6 +57,7 @@ namespace PIA_PWEB.Controllers
 
         // Acción para dejar una reseña
         [HttpPost]
+        [Authorize()]
         public async Task<IActionResult> DejarReseña(int id, string Contenido)
         {
             var pelicula = await _context.Peliculas.FindAsync(id);
@@ -82,6 +84,7 @@ namespace PIA_PWEB.Controllers
 
         //Accion para dar Like
         [HttpPost]
+        [Authorize()]
         public async Task<IActionResult> DarLike(int id)
         {
             var usuarioActual = await _context.Users
@@ -125,6 +128,7 @@ namespace PIA_PWEB.Controllers
 
         // Acción para calificar
         [HttpPost]
+        [Authorize()]
         public async Task<IActionResult> Calificar(int id, decimal puntuacion)
         {
             var pelicula = await _context.Peliculas.FindAsync(id);

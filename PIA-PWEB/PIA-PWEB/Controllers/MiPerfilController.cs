@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace PIA_PWEB.Controllers
 {
+    [Authorize()]
     public class MiPerfilController : Controller
     {
         private readonly PiaDbContext _context;

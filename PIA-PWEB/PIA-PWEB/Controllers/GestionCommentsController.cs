@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PIA_PWEB.Models.dbModels;
 using PIA_PWEB.Models.ViewModels;
@@ -6,6 +7,7 @@ using PIA_PWEB.Models.ViewModels;
 //Controlador que se encarga de cargar todas las resenas y permite a los administradores eliminarlas de ser necesario
 namespace PIA_PWEB.Controllers
 {
+    [Authorize(Roles="Admin")]
 
     public class GestionCommentsController : Controller
     {

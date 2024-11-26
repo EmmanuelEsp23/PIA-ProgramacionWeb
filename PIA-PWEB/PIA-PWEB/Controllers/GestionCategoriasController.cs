@@ -4,6 +4,7 @@ using PIA_PWEB.Models.dbModels;
 
 namespace PIA_PWEB.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class GestionCategoriasController : Controller
     {
 
@@ -13,8 +14,7 @@ namespace PIA_PWEB.Controllers
         {
             _context = context;
         }
-
-        [Authorize(Roles = "Admin")]
+        
         public IActionResult Index()
         {
             // Recupera las categorías desde la base de datos

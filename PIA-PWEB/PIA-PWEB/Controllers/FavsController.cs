@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PIA_PWEB.Models.dbModels;
 using System.Threading.Tasks;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 //Controlador de las acciones relacionadas con el feature de favoritos o likes
 namespace PIA_PWEB.Controllers
 {
+    [Authorize()]
     public class FavsController : Controller
     {
         private readonly PiaDbContext _context;

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 //Controlador de acciones CRUD con peliculas
 namespace PIA_PWEB.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class PeliculasController : Controller
     {
         private readonly PiaDbContext _context;
@@ -18,7 +19,6 @@ namespace PIA_PWEB.Controllers
             _context = context;
         }
 
-        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             var peliculas = _context.Peliculas
