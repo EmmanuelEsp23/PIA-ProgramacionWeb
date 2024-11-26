@@ -1,0 +1,55 @@
+﻿@model PIA_PWEB.Models.ViewModels.PeliculaViewModel
+
+@{
+    ViewData["Title"] = "Detalles de la Pelicula";
+}
+
+<h1>@Model.Pelicula.NombrePelicula</h1>
+<table>
+<td><img src="@Model.Pelicula.Portada" alt="@Model.Pelicula.NombrePelicula"  id="Portada" /></td>
+    <td>
+        <h2>Síntesis:</h2>
+        <hr />
+        <p id="descripcionpeli">@Model.Pelicula.Descripcion</p>
+        <hr />
+        <p><strong>Director:</strong> @Model.Pelicula.Director</p>
+        <p><strong>Categoría:</strong> @Model.Pelicula.IdCategoriaNavigation.NombreCategoria</p>
+        <p><strong>Plataforma:</strong> @Model.Pelicula.IdStreamingNavigation.NombreStreaming</p>
+        <p><strong>Promedio de Calificación:</strong> @(Model.PromedioCalificacion?.ToString("0.0") ?? "No calificada")</p>
+        <p><strong>Total Likes:</strong> @Model.TotalLikes</p>
+    </td>
+</table>
+<form asp-action="DarLike" method="post">
+    <button type="submit" class="btn btn-danger" id="btn-like">🤍</button>
+</form>
+
+<hr />
+<h2>Califica la pelicula:</h2>
+<form asp-action="Calificar" method="post">
+    <input type="number" name="puntuacion" class="form-control mb-2" min="0" max="10" placeholder="Calificación (0-10)" required />
+    <button type="submit" class="btn btn-dark">Calificar</button>
+</form>
+<br />
+<h2>Danos tu opinion!</h2>
+<form asp-action="DejarReseña" method="post">
+    <input type="hidden" name="id" value="@Model.Pelicula.IdPelicula" />
+    <textarea name="Contenido" class="form-control mb-2" placeholder="¿Qué te parecio esta pelicula?" required></textarea>
+    <button type="submit" class="btn btn-dark">Enviar</button>
+</form>
+<br />
+<h2>Reseñas</h2>
+@if (Model.Reseñas.Count == 0)
+{
+    <p>No hay reseñas para esta película.</p>
+}
+else
+{
+    <ul>
+        @foreach (var reseña in Model.Reseñas)
+        {
+            <li>@reseña.Contenido</li>
+        }
+    </ul>
+}
+<br /><br />
+<a asp-action="Index" class="btn btn-secondary">Regresar</a>

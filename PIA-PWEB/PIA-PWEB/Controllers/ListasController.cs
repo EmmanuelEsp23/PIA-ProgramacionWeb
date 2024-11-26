@@ -2,7 +2,7 @@
 
 namespace PIA_PWEB.Controllers
 {
-    public class Listas : Controller
+    public class ListasController : Controller
     {
         public IActionResult Index()
         {

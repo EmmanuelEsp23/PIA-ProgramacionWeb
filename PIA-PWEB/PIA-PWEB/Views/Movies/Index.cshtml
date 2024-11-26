@@ -1,0 +1,24 @@
+﻿@model IEnumerable<PIA_PWEB.Models.dbModels.Pelicula>
+
+@{
+    ViewData["Title"] = "Inicio";
+
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<h1>Películas</h1>
+<div class="row">
+    @foreach (var pelicula in Model)
+    {
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <a asp-action="Pelicula" asp-route-id="@pelicula.IdPelicula">
+                    <img src="@pelicula.Portada" class="card-img-top fixed-size" alt="@pelicula.NombrePelicula" />
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">@pelicula.NombrePelicula</h5>
+                </div>
+            </div>
+        </div>
+    }
+</div>

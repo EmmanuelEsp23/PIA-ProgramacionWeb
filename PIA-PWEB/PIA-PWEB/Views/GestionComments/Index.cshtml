@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PIA_PWEB.Models.dbModels.Reseña>
+﻿@model IEnumerable<PIA_PWEB.Models.ViewModels.ReseñaViewModel>
 
 @{
     ViewData["Title"] = "Gestión de Comentarios";
@@ -22,7 +22,7 @@
         @foreach (var reseña in Model)
         {
             <tr>
-                <td>@reseña.NombreUsuario</td> <!-- Se agrega como propiedad en el modelo -->
+                <td>@reseña.UserName</td> <!-- Se agrega como propiedad en el modelo -->
                 <td>@reseña.NombrePelicula</td> <!-- Relación Película-Reseña -->
                 <td>@reseña.Contenido</td>
                 <td>@reseña.FechaPublicacion?.ToString("dd/MM/yyyy") ?? "Sin fecha"</td>

@@ -20,7 +20,7 @@ public partial class Calificacione
     [Column(TypeName = "decimal(3, 1)")]
     public decimal? Puntuacion { get; set; }
 
-    public DateOnly? FechaCalificacion { get; set; }
+    public DateOnly FechaCalificacion { get; set; }
 
     [ForeignKey("IdPelicula")]
     [InverseProperty("Calificaciones")]

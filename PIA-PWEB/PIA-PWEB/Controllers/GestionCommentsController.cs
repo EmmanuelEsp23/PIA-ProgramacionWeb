@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PIA_PWEB.Models.dbModels;
+using PIA_PWEB.Models.ViewModels;
 
 //Controlador que se encarga de cargar todas las resenas y permite a los administradores eliminarlas de ser necesario
 namespace PIA_PWEB.Controllers
@@ -17,18 +18,17 @@ namespace PIA_PWEB.Controllers
         // GET: GestionComent
         public IActionResult Index()
         {
-            // Cargar las reseñas con los nombres del usuario y película
             var reseñas = (from r in _context.Reseñas
                            join u in _context.Users on r.IdUsuario equals u.Id
                            join p in _context.Peliculas on r.IdPelicula equals p.IdPelicula
-                           select new Reseña
+                           select new ReseñaViewModel
                            {
                                IdUsuario = r.IdUsuario,
                                IdPelicula = r.IdPelicula,
                                Contenido = r.Contenido,
                                FechaPublicacion = r.FechaPublicacion,
-                               NombreUsuario = u.UserName, // Agregado para mostrar en la vista
-                               NombrePelicula = p.NombrePelicula // Agregado para mostrar en la vista
+                               UserName = u.UserName, // Recupera el nombre del usuario
+                               NombrePelicula = p.NombrePelicula // Recupera el nombre de la película
                            }).ToList();
 
             return View(reseñas);

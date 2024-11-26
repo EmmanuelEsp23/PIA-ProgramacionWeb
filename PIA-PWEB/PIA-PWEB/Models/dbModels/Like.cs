@@ -6,24 +6,25 @@ using Microsoft.EntityFrameworkCore;
 
 namespace PIA_PWEB.Models.dbModels;
 
-[PrimaryKey("IdUsuario", "IdPelicula")]
+// Declarar clave primaria compuesta
+[PrimaryKey(nameof(IdUsuario), nameof(IdPelicula))]
 public partial class Like
 {
-    [Key]
     [Column("idUsuario")]
     public int IdUsuario { get; set; }
 
-    [Key]
     [Column("idPelicula")]
     public int IdPelicula { get; set; }
 
-    public DateOnly? FechaLike { get; set; }
+    [Column("fechaLike")]
+    public DateOnly FechaLike { get; set; }
 
-    [ForeignKey("IdPelicula")]
-    [InverseProperty("Likes")]
+    // Propiedades de navegación
+    [ForeignKey(nameof(IdPelicula))]
+    [InverseProperty(nameof(Pelicula.Likes))]
     public virtual Pelicula IdPeliculaNavigation { get; set; } = null!;
 
-    [ForeignKey("IdUsuario")]
-    [InverseProperty("Likes")]
+    [ForeignKey(nameof(IdUsuario))]
+    [InverseProperty(nameof(ApplicationUser.Likes))]
     public virtual ApplicationUser IdUsuarioNavigation { get; set; } = null!;
 }

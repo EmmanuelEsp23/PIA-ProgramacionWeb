@@ -29,7 +29,4 @@ public partial class Reseña
     [ForeignKey("IdUsuario")]
     [InverseProperty("Reseñas")]
     public virtual ApplicationUser IdUsuarioNavigation { get; set; } = null!;
-
-    public string NombreUsuario { get; set; } // Nombre del usuario
-    public string NombrePelicula { get; set; } // Nombre de la película
 }
