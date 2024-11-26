@@ -56,45 +56,34 @@ namespace PIA_PWEB.Controllers
 
         // Acción para dejar una reseña
         [HttpPost]
-        public async Task<IActionResult> DejarReseña(int id, Reseña nuevaReseña)
+        public async Task<IActionResult> DejarReseña(int id, string Contenido)
         {
-            if (ModelState.IsValid)
+            var pelicula = await _context.Peliculas.FindAsync(id);
+            var usuarioActual = await _context.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
+
+            if (pelicula == null || usuarioActual == null)
             {
-                nuevaReseña.IdPelicula = id;
-                _context.Reseñas.Add(nuevaReseña);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Pelicula", new { id });
+                return NotFound("La película o el usuario no existen.");
             }
 
-            var pelicula = await _context.Peliculas
-                .Include(p => p.IdCategoriaNavigation)
-                .Include(p => p.IdStreamingNavigation)
-                .Include(p => p.Reseñas)
-                .Include(p => p.Likes)
-                .Include(p => p.Calificaciones)
-                .FirstOrDefaultAsync(p => p.IdPelicula == id);
-
-            if (pelicula == null)
+            var reseña = new Reseña
             {
-                return NotFound();
-            }
-
-            var viewModel = new PeliculaViewModel
-            {
-                Pelicula = pelicula,
-                Reseñas = pelicula.Reseñas.ToList(),
-                PromedioCalificacion = pelicula.Calificaciones.Any() ? pelicula.Calificaciones.Average(c => c.Puntuacion) : (decimal?)null,
-                TotalLikes = pelicula.Likes.Count
+                IdPelicula = id,
+                IdUsuario = usuarioActual.Id,
+                Contenido = Contenido,
+                FechaPublicacion = DateOnly.FromDateTime(DateTime.Now),
+                IdPeliculaNavigation = pelicula,
+                IdUsuarioNavigation = usuarioActual
             };
-
-            return View("Pelicula", viewModel);
+            _context.Reseñas.Add(reseña);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Pelicula", new { id });
         }
 
         //Accion para dar Like
         [HttpPost]
         public async Task<IActionResult> DarLike(int id)
         {
-            // Obtener el usuario autenticado
             var usuarioActual = await _context.Users
                 .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
 
@@ -104,8 +93,6 @@ namespace PIA_PWEB.Controllers
             }
 
             int idUsuario = usuarioActual.Id;
-
-            // Verificar si el usuario ya dio like
             var existeLike = await _context.Likes
                 .AnyAsync(l => l.IdPelicula == id && l.IdUsuario == idUsuario);
 
@@ -114,15 +101,22 @@ namespace PIA_PWEB.Controllers
                 return BadRequest("El usuario ya ha dado like a esta película.");
             }
 
-            // Crear el objeto Like
+            var pelicula = await _context.Peliculas.FindAsync(id);
+
+            if (pelicula == null)
+            {
+                return NotFound("La película no existe.");
+            }
+
             var like = new Like
             {
                 IdPelicula = id,
                 IdUsuario = idUsuario,
-                FechaLike = DateOnly.FromDateTime(DateTime.Now)
+                FechaLike = DateOnly.FromDateTime(DateTime.Now),
+                IdPeliculaNavigation = pelicula, 
+                IdUsuarioNavigation = usuarioActual 
             };
 
-            // Agregar y guardar
             _context.Likes.Add(like);
             await _context.SaveChangesAsync();
 
@@ -133,7 +127,23 @@ namespace PIA_PWEB.Controllers
         [HttpPost]
         public async Task<IActionResult> Calificar(int id, decimal puntuacion)
         {
-            var calificacion = new Calificacione { IdPelicula = id, Puntuacion = puntuacion };
+            var pelicula = await _context.Peliculas.FindAsync(id);
+            var usuarioActual = await _context.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
+
+            if (pelicula == null || usuarioActual == null)
+            {
+                return NotFound("La película o el usuario no existen.");
+            }
+
+            var calificacion = new Calificacione
+            {
+                IdPelicula = id,
+                IdUsuario = usuarioActual.Id,
+                Puntuacion = puntuacion,
+                FechaCalificacion = DateOnly.FromDateTime(DateTime.Now),
+                IdPeliculaNavigation = pelicula, 
+                IdUsuarioNavigation = usuarioActual 
+            };
             _context.Calificaciones.Add(calificacion);
             await _context.SaveChangesAsync();
             return RedirectToAction("Pelicula", new { id });

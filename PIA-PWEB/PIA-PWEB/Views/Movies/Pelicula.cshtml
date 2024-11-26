@@ -20,12 +20,14 @@
     </td>
 </table>
 <form asp-action="DarLike" method="post">
+    <input type="hidden" name="id" value="@Model.Pelicula.IdPelicula" />
     <button type="submit" class="btn btn-danger" id="btn-like">🤍</button>
 </form>
 
 <hr />
 <h2>Califica la pelicula:</h2>
 <form asp-action="Calificar" method="post">
+    <input type="hidden" name="id" value="@Model.Pelicula.IdPelicula" />
     <input type="number" name="puntuacion" class="form-control mb-2" min="0" max="10" placeholder="Calificación (0-10)" required />
     <button type="submit" class="btn btn-dark">Calificar</button>
 </form>
